@@ -10,25 +10,28 @@
     <div id="content">
       <h1>Isaaq's Portfolio</h1>
       <p>This is my portfolio.</p>
-      <img src="/images/IMG-3704.JPG" alt="This is me!" style="width:100%"/>
+      <div class="myself">
+        <img src="/images/IMG-3704.JPG" alt="This is me!" style="width:100%"/>
+      </div>
       <p>My name is Isaaq and I am a second year at 
          the University of Chicago studying Computer Science and Psychology!
       </p>
-      <div class="pcImages">
-        <div class="pcImgs">
+
+      <div class="row">
+        <div class="sideBySide">
          <img src="/images/IMG-0671.jpeg" alt="My PC" style="width:100%">
         </div>
-        <div class="pcImgs">
+        <div class="sideBySide">
           <img src="/images/IMG-0672.jpg" alt="Inside of PC" style="width:100%">
          </div>
      </div>
       <p>
          I play video games and like to tinker with my PC!
       </p>
-      <p>I also stream on <a href = "http://twitch.tv/isaaq_"> Twitch</a>!</p>
+
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
       <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
+      <button onclick="addRandomGreeting()">Click Me!</button>
       <div id="greeting-container"></div>
     </div>
   </body>

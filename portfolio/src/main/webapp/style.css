@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 #content {
   margin-left: auto;
   margin-right: auto;
@@ -8,13 +12,16 @@
   margin-top: 20px;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
-.pcImgs {
+.sideBySide {
   float: left;
   width: 50%;
+  margin: auto;
   padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
