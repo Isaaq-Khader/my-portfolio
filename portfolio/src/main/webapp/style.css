@@ -7,3 +7,14 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.pcImgs {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
