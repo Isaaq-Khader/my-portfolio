@@ -8,12 +8,48 @@
   </head>
   <body>
     <div id="content">
-      <h1>My Portfolio</h1>
+      <h1>Isaaq's Portfolio</h1>
       <p>This is my portfolio.</p>
+      <div class="myself">
+        <img src="/images/IMG-3704.JPG" alt="This is me!" style="width:100%"/>
+      </div>
+      <p>My name is Isaaq and I am a second year at 
+         the University of Chicago studying Computer Science and Psychology!
+      </p>
+
+      <div class="row">
+        <div class="sideBySide">
+         <img src="/images/IMG-0671.jpeg" alt="My PC" style="width:100%">
+        </div>
+        <div class="sideBySide">
+          <img src="/images/IMG-0672.jpg" alt="Inside of PC" style="width:100%">
+         </div>
+     </div>
+      <p>
+         I play video games and like to tinker with my PC!
+      </p>
+      
+      <div class="row">
+        <div class="sideBySide">
+            <p>Add me on LinkedIn!</p>
+            <a href= "https://www.linkedin.com/in/isaaq/">
+            <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png"
+                 style="width:50%">
+            </a>
+        </div>
+        <div class="sideBySide">
+          <p>Follow me on Twitch!</p>
+         <a href = "http://twitch.tv/isaaq_">
+           <img src="https://air-marketing-assets.imgix.net/blog/logo-db/twitch-logo-png/twitch-logo-png-1.png?auto=format&fit=max&ixlib=react-9.0.2&h=270&w=576"
+           style="width:50%">
+         </a>
+        </div>
+    </div>
+
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
       <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+      <button onclick="addRandomFact()">Click Me!</button>
+      <div id="fact-container"></div>
     </div>
   </body>
 </html>
