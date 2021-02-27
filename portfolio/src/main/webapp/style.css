@@ -5,11 +5,45 @@
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 75%;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
 }
 
 #greeting-container {
   margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+  background-color: #F9F6F6;
+}
+
+.header {
+    text-align: center;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C62E12;
+    border-left: 10px solid #AF0401;
+}
+
+.self {
+    flex-basis: 60%;
+    padding-left: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.intro-desc {
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 20px;
 }
 
 .sideBySide {
