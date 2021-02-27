@@ -23,6 +23,10 @@ body {
 
 .header {
     text-align: center;
+    background-color: #F9F6F6;
+    padding: 1%;
+    border-bottom: 10px solid #dbdbdb;
+    margin-bottom: 1%;
 }
 
 .intro {
@@ -60,4 +64,5 @@ body {
 
 .PCPic {
   flex-basis: 60%;
+  padding: 5px;
 }
