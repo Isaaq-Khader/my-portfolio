@@ -5,23 +5,78 @@
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: 75%;
+  font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
 }
 
 #greeting-container {
   margin-top: 20px;
 }
 
-.sideBySide {
-  float: left;
-  width: 50%;
-  margin: auto;
-  padding: 5px;
+img {
+    max-width: 100%;
 }
 
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
+body {
+  background-color: #5ACADB;
+}
+
+tr:hover {background-color: rgb(158, 7, 4);}
+
+.header {
+    text-align: center;
+    background-color: #F9F6F6;
+    padding: 1%;
+    border-bottom: 10px solid #dbdbdb;
+    margin-bottom: 1%;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C62E12;
+    border-left: 10px solid #AF0401;
+}
+
+.self {
+    flex-basis: 60%;
+    padding-left: 3%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.intro-desc {
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+.moreAbtMeHeader {
+    text-align: center;
+}
+
+.PC {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C62E12;
+    border-right: 10px solid #AF0401;
+}
+
+.PCPic {
+  flex-basis: 30%;
+  padding: 1%;
+}
+
+.pcpp-part-list {
+    border: 2px solid black;
+    padding: 2px;
+}
+
+.pcpp-part-list-type, .pcpp-part-list-item {
+    text-align: center;
+    border: 1px solid black;
+    padding: 2px;
+    
 }
