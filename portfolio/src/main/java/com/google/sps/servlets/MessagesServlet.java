@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/messages")
+@WebServlet("/anime")
 public final class MessagesServlet extends HttpServlet {
     
     public class Anime {
