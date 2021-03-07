@@ -37,13 +37,19 @@ async function sayHello()
     helloContainer.innerText = textFromResponse;
 }
 
+function RNG(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 /** Gets favorite anime by random from the server and adds it to the page. */
 async function giveAnime() 
 {
     const responseFromServer = await fetch("/anime");
     // The json() function returns an object that contains fields that we can
     // reference to create HTML.
-    const anime = await responseFromServer.json();
+    const animes = await responseFromServer.json();
+
+    const anime = animes[RNG(2)];
 
     
     const animeContainer = document.getElementById('anime-container');

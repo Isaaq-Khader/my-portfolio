@@ -38,7 +38,7 @@ public final class AnimeServlet extends HttpServlet {
         animes.add(anime2);
 
         // needs random functionality but hard-coded for now
-        String result = convertToJsonUsingGson(anime1);
+        String result = convertToJsonUsingGson(animes);
 
         // Send the JSON as the response
         response.setContentType("application/json;");
@@ -46,9 +46,9 @@ public final class AnimeServlet extends HttpServlet {
 
   }
 
-  private String convertToJsonUsingGson(Anime anime) {
-    Gson gson = new Gson();
-    String json = gson.toJson(anime);
+  private String convertToJsonUsingGson(ArrayList<Anime> animes) {
+        Gson gson = new Gson();
+        String json = gson.toJson(animes);
     return json;
   }
 }
