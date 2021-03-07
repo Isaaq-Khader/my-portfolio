@@ -29,7 +29,7 @@ function addRandomFact() {
 
 async function sayHello() 
 {
-    const responseFromServer = await fetch("this is the server saying hello!");
+    const responseFromServer = await fetch("/greetings");
     const textFromResponse = await responseFromServer.text();
 
     const helloContainer = document.getElementById('hello-container');
