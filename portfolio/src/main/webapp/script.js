@@ -27,6 +27,7 @@ function addRandomFact() {
   factContainer.innerText = fact;
 }
 
+
 async function sayHello() 
 {
     const responseFromServer = await fetch("/greetings");
@@ -34,4 +35,29 @@ async function sayHello()
 
     const helloContainer = document.getElementById('hello-container');
     helloContainer.innerText = textFromResponse;
+}
+
+/** Gets favorite anime by random from the server and adds it to the page. */
+async function giveAnime() 
+{
+    const responseFromServer = await fetch("/anime");
+    // The json() function returns an object that contains fields that we can
+    // reference to create HTML.
+    const anime = await responseFromServer.json();
+
+    
+    const animeContainer = document.getElementById('anime-container');
+    animeContainer.innerHTML = '';
+
+    animeContainer.appendChild(
+      createListElement('Anime Name: ' + anime.name));
+    animeContainer.appendChild(
+      createListElement('Rating: ' + anime.rating));
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
 }
