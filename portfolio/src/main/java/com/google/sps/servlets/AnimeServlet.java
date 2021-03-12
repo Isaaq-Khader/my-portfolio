@@ -26,8 +26,6 @@ public final class AnimeServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        // Anime animes[];
-        // animes[0] = new Anime("Jojo's Bizzare Adventure", 10);
 
         ArrayList<Anime> animes = new ArrayList<Anime>();
 
@@ -37,7 +35,6 @@ public final class AnimeServlet extends HttpServlet {
         animes.add(anime1);
         animes.add(anime2);
 
-        // needs random functionality but hard-coded for now
         String result = convertToJsonUsingGson(animes);
 
         // Send the JSON as the response
