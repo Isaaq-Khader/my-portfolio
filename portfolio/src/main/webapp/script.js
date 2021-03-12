@@ -67,3 +67,18 @@ function createListElement(text) {
   liElement.innerText = text;
   return liElement;
 }
+
+async function giveSentimentReport(e) 
+{
+    console.log("This is the script saying hello!\n");
+
+    const form = document.querySelector('form')
+        form.addEventListener('submit', event => {
+        // submit event detected
+        event.preventDefault()
+    })
+    
+    const sentimentContainer = document.getElementById('sentiment-container');
+    sentimentContainer.innerHTML = '';
+    sentimentContainer.innerText = analysis;
+}

@@ -3,6 +3,7 @@ package com.google.sps.servlets;
 import com.google.cloud.language.v1.Document;
 import com.google.cloud.language.v1.LanguageServiceClient;
 import com.google.cloud.language.v1.Sentiment;
+import com.google.gson.Gson;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,12 +24,17 @@ public class SentimentAnalyzerServlet extends HttpServlet {
     float score = sentiment.getScore();
     languageService.close();
 
-    // Output the sentiment score as HTML.
-    // A real project would probably store the score alongside the content.
-    response.setContentType("text/html;");
-    response.getWriter().println("<h1>Sentiment Analysis</h1>");
-    response.getWriter().println("<p>You entered: " + msg + "</p>");
-    response.getWriter().println("<p>Sentiment analysis score: " + score + "</p>");
-    response.getWriter().println("<p><a href=\"/\">Back</a></p>");
+    // am i supposed to do computation here and then present it as HTML to the webpage?
+    String result = convertToJsonUsingGson(score);
+
+     // Send the JSON as the response
+    response.setContentType("application/json;");
+    response.getWriter().println(result);
   }
+
+  private String convertToJsonUsingGson(float score) {
+        Gson gson = new Gson();
+        String json = gson.toJson(score);
+        return json;
+    }
 }
