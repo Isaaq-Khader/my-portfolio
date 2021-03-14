@@ -68,15 +68,14 @@ function createListElement(text) {
   return liElement;
 }
 
-async function giveSentimentReport(e) 
+async function giveSentimentReport() 
 {
     console.log("This is the script saying hello!\n");
+    console.log("This is the script saying hello!\n");
+    console.log("This is the script saying hello!\n");
 
-    const form = document.querySelector('form')
-        form.addEventListener('submit', event => {
-        // submit event detected
-        event.preventDefault()
-    })
+    const responseFromServer = await fetch("/sentiment");
+    const analysis = responseFromServer.json();
     
     const sentimentContainer = document.getElementById('sentiment-container');
     sentimentContainer.innerHTML = '';
