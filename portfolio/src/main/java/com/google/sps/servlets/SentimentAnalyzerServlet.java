@@ -15,45 +15,25 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/sentiment")
 public class SentimentAnalyzerServlet extends HttpServlet {
 
-    Gson gson = new Gson();
-
-    public class UserMessage {
-        private String message;
-    }
-
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-    String msg = request.getReader().lines().collect(Collectors.joining());
-    UserMessage m = new UserMessage();
+    String message = request.getParameter("message");
 
-    m = gson.fromJson(msg, UserMessage.class);
-
-    System.out.println(m.message);
-
-    System.out.println("Going to get score... ");
     Document doc =
-        Document.newBuilder().setContent(m.message).setType(Document.Type.PLAIN_TEXT).build();
+        Document.newBuilder().setContent(message).setType(Document.Type.PLAIN_TEXT).build();
     LanguageServiceClient languageService = LanguageServiceClient.create();
     Sentiment sentiment = languageService.analyzeSentiment(doc).getDocumentSentiment();
     float score = sentiment.getScore();
     languageService.close();
 
-    System.out.println("got the score!!!");
-
-    String result = convertToJsonUsingGson(score);
-
-
-    // does this have to become a GET function?
-    System.out.println("Sentiment Result: " + result);
-     // Send the JSON as the response
-    response.setContentType("application/json;");
-    response.getWriter().println(result);
+    // Output the sentiment score as HTML.
+    // A real project would probably store the score alongside the content.
+    response.setContentType("text/html;");
+    response.getWriter().println("<h1>Sentiment Analysis</h1>");
+    response.getWriter().println("<p>Your Original Message: " + message + "</p>");
+    response.getWriter().println("<p>Your Sentiment Score: " + score + "</p>");
+    response.getWriter().println("<p><a href=\"/\">Back</a></p>");
+    
   }
-
-  private String convertToJsonUsingGson(float score) {
-        Gson gson = new Gson();
-        String json = gson.toJson(score);
-        return json;
-    }
 }

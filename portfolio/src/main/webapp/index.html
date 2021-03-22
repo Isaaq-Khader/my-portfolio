@@ -173,11 +173,10 @@
     </button>
 
     <h2>Test out a Sentiment Analyzer!</h2>
-    <p id="sentiment-container"></p>
-    <form action="/" onsubmit="giveSentimentReport();">
-        <textarea id="sentiment-message" name="message"></textarea>
+    <form method="POST" action="/sentiment">
+      <textarea name="message"></textarea>
       <br/>
-      <input type="submit" value="Submit">
+      <button>Submit</button>
     </form>
 
     </div>
