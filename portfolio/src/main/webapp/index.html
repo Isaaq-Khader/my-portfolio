@@ -19,6 +19,13 @@
     <div id="content">
         <div class = "header">
             <h1>Isaaq's Portfolio</h1>
+            <ul class="horizontal">
+            <div class="nav">                    
+                <li class="nav-element"><a class="active" href="/">Home</a></li>
+                <li class="nav-element"><a href="/contact.html">Contact</a></li>
+                <li class="nav-element rightli" style="float:right"><a href="/servlets.html">Servlets</a></li>
+            </div>
+            </ul>
         </div>
       
       <div class ="intro">
@@ -135,50 +142,24 @@
                 <img src="/images/IMG-0671.jpeg" alt="My PC">
             </div>
       </div>
-        <p>Click here to learn more about me:</p>
-        <button onclick="addRandomFact()">Click Me!</button>
-        <div id="fact-container"></div>
       
       <div class="socials">
-        <div class="sideBySide">
-            <p>Add me on LinkedIn!</p>
+        <div class="linkedin">
             <a href= "https://www.linkedin.com/in/isaaq/">
-            <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png"
-                 style="width:25%">
+            <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png">
             </a>
         </div>
-        <div class="sideBySide">
-          <p>Follow me on Twitch!</p>
+        <div class="twitch">
          <a href = "http://twitch.tv/isaaq_">
-           <img src="https://air-marketing-assets.imgix.net/blog/logo-db/twitch-logo-png/twitch-logo-png-1.png?auto=format&fit=max&ixlib=react-9.0.2&h=270&w=576"
-           style="width:25%">
+           <img src="https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/twitch-512.png">
          </a>
+         </div>
+        <div class="github">
+            <a href = "https://github.com/Isaaq-Khader"> 
+                <img src="https://image.flaticon.com/icons/png/512/25/25231.png">
+            </a>
         </div>
       </div>
-
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-
-    <h1>Say Hello to the Server!</h1>
-    <button onclick="sayHello();">
-      Hello!
-    </button>
-    <h4 id="hello-container"></h4>
-    <p>Click <a href="/greetings">here</a> to see the server directly say hello.</p>
-
-    <h1>Need Some Anime Recommendations?</h1>
-    <h3>Click on the button below to find out some of my favorites!</h3>
-    <h4 id="anime-container"></h4>
-    <button onclick="giveAnime();">
-      Click Here
-    </button>
-
-    <h2>Test out a Sentiment Analyzer!</h2>
-    <form method="POST" action="/sentiment">
-      <textarea name="message"></textarea>
-      <br/>
-      <button>Submit</button>
-    </form>
-
     </div>
   </body>
 </html>

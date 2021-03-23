@@ -49,7 +49,7 @@ async function giveAnime()
     // reference to create HTML.
     const animes = await responseFromServer.json();
 
-    const anime = animes[RNG(2)];
+    const anime = animes[RNG(8)];
 
     
     const animeContainer = document.getElementById('anime-container');
@@ -57,6 +57,8 @@ async function giveAnime()
 
     animeContainer.appendChild(
       createListElement('Anime Name: ' + anime.name));
+    animeContainer.appendChild(
+      createListElement('My Thoughts: ' + anime.description));
     animeContainer.appendChild(
       createListElement('Rating: ' + anime.rating));
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title> 
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <!--Allows for Favicon (credits to https://realfavicongenerator.net/)-->    
+     <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+  </head>
+<body>  
+    <div id="content">
+        <div class = "header">
+            <h1>Isaaq's Portfolio</h1>
+            <ul class="horizontal">
+            <div class="nav">    
+                <li class="nav-element"><a href="/">Home</a></li>
+                <li class="nav-element"><a href="/contact.html">Contact</a></li>
+                <li class="nav-element rightli" style="float:right"><a class="active" href="/servlets.html">Servlets</a></li>
+            </div>
+            </ul>
+        </div>
+    <p>Click <a href="/hello">here</a> to see content created by server code.</p>
+
+    <h1>Say Hello to the Server!</h1>
+    <button onclick="sayHello();">
+      Hello!
+    </button>
+    <h4 id="hello-container"></h4>
+
+    <h1>Click here to learn more about me:</h1>
+        <button onclick="addRandomFact()">Click Me!</button>
+        <div id="fact-container"></div>
+
+    <h1>Need Some Anime Recommendations?</h1>
+    <h3>Click on the button below to find out some of my favorites!</h3>
+    <h4 id="anime-container"></h4>
+    <button onclick="giveAnime();">
+      Click Here
+    </button>
+
+    <h2>Test out a Sentiment Analyzer!</h2>
+    <form method="POST" action="/sentiment">
+      <textarea name="message"></textarea>
+      <br/>
+      <button>Submit</button>
+    </form>
+
+    </div>
+  </body>
+</html>

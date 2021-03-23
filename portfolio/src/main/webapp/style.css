@@ -13,6 +13,37 @@
   margin-top: 20px;
 }
 
+.active {
+  background-color: #5ACADB;
+}
+
+.horizontal {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 3px;
+  padding-right: 3px;
+  overflow: hidden;
+  background-color: #F9F6F6;
+  border-color: #F9F6F6;
+}
+
+.nav-element {
+  float: left;
+}
+
+.nav-element a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-element a:hover {
+  background-color: #aeacac;
+}
+
 img {
     max-width: 100%;
 }
@@ -26,7 +57,7 @@ tr:hover {background-color: rgb(158, 7, 4);}
 .header {
     text-align: center;
     background-color: #F9F6F6;
-    padding: 1%;
+    padding-top: 1%;
     border-bottom: 10px solid #dbdbdb;
     margin-bottom: 1%;
 }
@@ -79,4 +110,17 @@ tr:hover {background-color: rgb(158, 7, 4);}
     border: 1px solid black;
     padding: 2px;
     
+}
+
+.socials {
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.linkedin, .twitch, .github {
+    padding: 5px;
 }
