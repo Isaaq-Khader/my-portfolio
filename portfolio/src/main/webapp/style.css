@@ -20,7 +20,8 @@
 .horizontal {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-left: 3px;
+  padding-right: 3px;
   overflow: hidden;
   background-color: #F9F6F6;
   border-color: #F9F6F6;
