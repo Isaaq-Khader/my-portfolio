@@ -67,17 +67,3 @@ function createListElement(text) {
   liElement.innerText = text;
   return liElement;
 }
-
-async function giveSentimentReport() 
-{
-    console.log("This is the script saying hello!\n");
-    console.log("This is the script saying hello!\n");
-    console.log("This is the script saying hello!\n");
-
-    const responseFromServer = await fetch("/sentiment");
-    const analysis = responseFromServer.json();
-    
-    const sentimentContainer = document.getElementById('sentiment-container');
-    sentimentContainer.innerHTML = '';
-    sentimentContainer.innerText = analysis;
-}
