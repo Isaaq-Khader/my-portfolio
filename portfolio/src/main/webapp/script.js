@@ -67,39 +67,3 @@ function createListElement(text) {
   liElement.innerText = text;
   return liElement;
 }
-
-async function giveSentimentReport() 
-{
-
-    var result = document.getElementById("sentiment-message").value;
-
-    const data = { message: result };
-
-    console.log("\nGetting postResponse!!!!\n");
-    const postResponse = await fetch("/sentiment", {
-                                        method: "POST",
-                                        headers: {
-                                            "Content-Type": "application/json",
-                                        },
-                                        body: JSON.stringify(data), 
-                                        });
-    // .then(response => response.json())
-    // .then(data => {
-    // console.log('Success:', data);
-    // })
-    // .catch((error) => {
-    // console.error('Error:', error);
-    // });    
-    console.log("postResponse: " + postResponse + "\n");
-    console.log("\nWe got the postResponse!!!!\n");
-
-
-    // const responseFromServer = await fetch("/sentiment");
-    // console.log("response from server: "+responseFromServer+"\n");
-    // const analysis = await responseFromServer.json();
-    // console.log("response from analysis: " + analysis);
-    
-    const sentimentContainer = document.getElementById('sentiment-container');
-    sentimentContainer.innerHTML = '';
-    sentimentContainer.innerText = analysis;
-}
